@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/classify/classify",
+    "pages/shopCar/shopCar",
+    "pages/mine/mine",
+    "pages/regions/regions",
+    "pages/shopInfo/shopInfo",
+    "pages/unClassify/unClassify",
+    "pages/pay/pay",
+    "pages/hisPay/hisPay",
+    "pages/selMap/selMap"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#950000",
+    "navigationBarTitleText": "UrShop商城",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#dd3c46",
+    "list": [
+      {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/public/images/home.png",
+      "selectedIconPath": "/public/images/a-home.png"
+    },
+    {
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "/public/images/classify.png",
+      "selectedIconPath": "/public/images/a-classify.png"
+    },
+    {
+      "pagePath": "pages/shopCar/shopCar",
+      "text": "购物车",
+      "iconPath": "/public/images/shoppingcart.png",
+      "selectedIconPath": "/public/images/a-shoppingcart.png"
+    },
+    {
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath": "/public/images/nime.png",
+      "selectedIconPath": "/public/images/a-mine.png"
+    }
+  ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

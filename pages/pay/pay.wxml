@@ -1,0 +1,21 @@
+<view class="top-bar">
+  <image bindtap="backTo" src="/public/images/00-返回.png" mode="widthFix"/>
+  <text>支付</text>
+  <view />
+</view>
+<view class="pay-box">
+  <view bindtap="pay">
+    <text>{{total}}￥</text>
+    <view>点击支付</view>
+  </view>
+</view>
+<page-container bind:clickoverlay="unShow"
+show="{{isShowPag}}" overlay-style="background-color:rgba(0,0,0,0.2);">
+  <view class="pay">
+    <view>需支付：<text>{{total}}</text>￥</view>
+    <view>
+      <view bindtap="unShow">取消</view>
+      <view bindtap="define">确认</view>
+    </view>
+  </view>
+</page-container>

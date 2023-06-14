@@ -1,0 +1,75 @@
+.sc-box{
+  background-color: #efefef;
+  height: 100vh;
+}
+.hr-box{
+  height: 25rpx;
+  background-color: #efefef;
+}
+.items{
+  padding: 30rpx 40rpx;
+  background-color: white;
+}
+.bt-text{
+  font-size: 36rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+}
+
+.show-map{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.show-map > image{
+  width: 60rpx;
+}
+.show-map > view > view{
+  font-size: 36rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+}
+.show-map > view > view:nth-child(2){
+  margin-top: 20rpx;
+}
+.show-map > view > view:last-child{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  font-weight: 500;
+  color: #afafaf;
+}
+
+.search-box > input{
+  background-color: #efefef;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  height: 70rpx;
+  width: 100%;
+  padding: 0 70rpx;
+  border-radius: 35rpx;
+  margin-top: 20rpx;
+}
+.m-item{
+  padding: 20rpx 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #efefef;
+}
+.m-bt{
+  font-size: 36rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+}
+.m-m{
+  margin-top: 10rpx;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #afafaf;
+}
+.m-tip{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #9500009d;
+}

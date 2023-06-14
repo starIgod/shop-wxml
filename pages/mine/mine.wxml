@@ -1,0 +1,24 @@
+<scroll-view scroll-y>
+<view class="head-box">
+  <view>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view>
+    <open-data class="use-name" type="userNickName"></open-data>
+    <view>绑定手机号</view>
+  </view>
+</view>
+<view class="list-box">
+  <view class="list-item" 
+  wx:for="{{tab}}" wx:key="index" bindtap="{{item.fun}}">
+    <image src="{{item.icon}}" mode="widthFix"/>
+    <view>
+      <text>{{item.name}}</text>
+      <image style="width: 30rpx;" src="/public/images/home/01-进入箭头.png" mode="widthFix"/>
+    </view>
+  </view>
+</view>
+<view wx:for="{{traitList}}" wx:key="index">
+  <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+</view>
+</scroll-view>

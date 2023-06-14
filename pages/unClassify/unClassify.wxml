@@ -1,0 +1,31 @@
+<view class="pos-box">
+<view class="top-bar">
+  <image bindtap="backTo" src="/public/images/00-返回.png" mode="widthFix"/>
+  <text>{{topTitle}}</text>
+  <view />
+</view>
+<view class="select-box" wx:if="{{subList.length!=0}}">
+  <view wx:for="{{subList}}" wx:key="index"
+  class="{{subInd==index?'actSub':''}}"
+  bindtap="selSub" data-index="{{index}}" data-item="{{item}}">
+    {{item.Name}}
+  </view>
+</view>
+</view>
+<view class="container" style="margin-top: {{subList.length!=0?'250rpx':'150rpx'}};">
+  <scroll-view
+  scroll-y 	enable-flex="{{true}}" enable-flex="true"
+  class="right-box">
+  <view class="shop-box">
+    <view class="shop-item" 
+    bindtap="getShop" data-item="{{item}}"
+    wx:for="{{showShopList}}" wx:key="Id">
+      <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+      <text>{{item.Name}}</text>
+    </view>
+    <view wx:if="{{showShopList.length==0}}">
+      没有这类商品呢~
+    </view>
+  </view>
+  </scroll-view>
+</view>

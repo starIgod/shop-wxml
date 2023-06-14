@@ -1,0 +1,65 @@
+
+
+.list-item{
+  margin: 0 20rpx;
+  position: relative;
+  display: flex;
+}
+.list-item:not(:last-child){
+  border-bottom: 1rpx solid #efefef;
+}
+.list-item > view:first-child > image{
+  width: 150rpx;
+}
+.list-infos > view:nth-child(1){
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.list-infos > view:nth-child(1) > view:first-child{
+  width: 450rpx;
+  margin-right: 20rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  font-weight: bold;
+}
+.list-infos > view:nth-child(1) > view:last-child{
+  width: 100rpx;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 36rpx;
+}
+.list-infos > view:nth-child(2){
+  display: flex;
+  align-items: center;
+}
+.list-infos > view:nth-child(2) > view{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  margin-top: 20rpx;
+  background-color: #bdbdbd;
+  padding: 10rpx 15rpx;
+  margin-right: 10rpx;
+  color: white;
+  border-radius: 10rpx;
+}
+.list-infos > view:nth-child(2) > view:first-child{
+  background-color: tomato;
+}
+
+.date-box{
+  max-width: 150rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  position: absolute;
+  right: 0;
+  bottom: 26rpx;
+}

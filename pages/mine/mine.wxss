@@ -1,0 +1,56 @@
+
+.head-box{
+  border-top: 1rpx solid #efefef2f;
+  height: 200rpx;
+  background-color: #950000;
+  display: flex;
+  align-items: center;
+}
+.head-box > view:first-child{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  width: 140rpx;
+  height: 140rpx;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.head-box > view:last-child > .use-name{
+  color: white;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+.head-box > view:last-child > view{
+  margin-top: 20rpx;
+  padding: 8rpx 15rpx;
+  border: 1rpx solid #efefef;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  border-radius: 10rpx;
+  color: white;
+}
+
+
+.list-item{
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 40rpx 0;
+  margin: 0 40rpx;
+}
+.list-item:not(:last-child){
+  border-bottom: 5rpx solid #efefef;
+}
+.list-item > image{
+  width: 60rpx;
+  margin-right: 30rpx;
+}
+.list-item > view{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item > view > text{
+  font-size: 36rpx;
+  line-height: 36rpx;
+}

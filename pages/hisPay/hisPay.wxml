@@ -1,0 +1,19 @@
+
+<scroll-view scroll-y>
+<view class="list-item" wx:for="{{storArr}}" wx:key="index">
+  <view>
+    <image src="{{item.bill[0].banner[0].BigUrl}}" mode="widthFix"/>
+  </view>
+  <view class="list-infos">
+    <view>
+      <view><text>{{item.bill[0].shopInfos.Name}}</text></view>
+      <view>{{item.bill.length-1>0?"+"+(item.bill.length-1):1}}</view>
+    </view>
+    <view>
+      <view bindtap="remHis" data-index="{{index}}">删除记录</view>
+      <!-- <view>查看记录</view> -->
+    </view>
+  </view>
+  <view class="date-box">{{item.date}}</view>
+</view>
+</scroll-view>

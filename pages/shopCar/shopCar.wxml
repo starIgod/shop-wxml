@@ -1,0 +1,39 @@
+<wxs src="../../utils/showFixe.wxs" module="filters"/>
+<block wx:if="{{shopingCar.length==0}}">
+  <view class="shop-null">
+    <text>车车空空，快去买买</text>
+  </view>
+</block>
+<block wx:else>
+  <scroll-view scroll-y enable-flex="true">
+    <view class="shop-box">
+      <view class="shop-item" wx:for="{{shopingCar}}" wx:key="index">
+        <image src="{{item.banner[0].BigUrl}}" mode="widthFix"/>
+        <view class="infos-box">
+          <view class="info-box">
+            <view>{{item.shopInfos.Name}}</view>
+            <view>
+              {{item.data.AttributesXml&&item.data.AttributesXml!=""?item.data.AttributesXml:(item.specs.value[item.specs.name].Name?(item.specs.name)+": "+(item.specs.value[item.specs.name].Name):"无规格")}}
+            </view>
+            <view class="sprice-box">
+              <text>单价：{{item.price}}￥</text>
+              <view>总价：<text>{{filters.toFix(item.price * item.num,2)}}</text>￥</view>
+            </view>
+          </view>
+          <view class="num-box">
+              <view bindtap="setNum" data-set="1" data-index="{{index}}">-</view>
+              <input bindinput="inpNum"	bindblur="inpNum" data-index="{{index}}"
+              type="number" value="{{item.num}}" model:value="{{item.num}}"/>
+              <view bindtap="setNum" data-set="0" data-index="{{index}}">+</view>
+            </view>
+          <view class="clear-item"
+          bindtap="clearShop" data-index="{{index}}">弃货</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="total-box">
+    <view>总价：<text>{{total}}</text>￥</view>
+    <view bindtap="toPay">结账</view>
+  </view>
+</block>

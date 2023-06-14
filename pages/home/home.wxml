@@ -1,0 +1,60 @@
+<view class="hr-box" />
+<view class="regions-box">
+  <view>
+    <text>当前分店：广州</text>
+    <text>分店地址：地址</text>
+  </view>
+  <image bindtap="selMap" src="/public/images/home/01-进入箭头.png" mode="widthFix"/>
+</view>
+<view class="hr-box" />
+<view class="search-box">
+  <image src="/public/images/home/02-搜索.png" mode="widthFix"/>
+  <input type="text" placeholder="搜一搜"
+  model:value="{{searchValue}}"/>
+  <image src="/public/images/home/03-关闭.png" mode="widthFix"
+  wx:if="{{searchValue.length!=0}}" bindtap="clearSearchValue"/>
+</view>
+<swiper class="swiper-box" 
+autoplay interval="2000"
+indicator-dots indicator-active-color="#950000"
+circular >
+  <swiper-item bindtap="bannerInfos" data-info="{{item}}" wx:for="{{bannerList}}" wx:key="index">
+    <image style="height: 150rpx;" src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+  </swiper-item>
+</swiper>
+<view style="height: 80rpx;background-color: #950000;" />
+<view class="home-categ">
+  <view wx:for="{{homeCategList}}" wx:key="Id"
+  bindtap="bannerInfos" data-item="{{item}}">
+    <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+    <text>{{item.Name}}</text>
+  </view>
+</view>
+<view class="hr-box" />
+<view wx:for="{{traitList}}" wx:key="index">
+  <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+</view>
+<view class="hr-box" />
+<view class="hot-box">
+  <view>
+    <text>热销榜单</text>
+    <text>查看更多 ></text>
+  </view>
+  <view>
+    <view class="hot-item"
+    wx:for="{{hotList}}" wx:key="Id"
+    bindtap="bannerInfos" data-info="{{item}}" data-isS="true">
+      <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+      <view>
+        <view>
+          <text>{{item.Name}}</text>
+          <text>{{item.Short}}</text>
+        </view>
+        <text>{{item.Price.Price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="fixed-box">
+  <image src="/public/images/huihua.png" mode="widthFix"/>
+</view>

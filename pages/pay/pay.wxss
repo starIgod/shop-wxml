@@ -1,0 +1,133 @@
+.top-bar{
+  background-color: #950000;
+  height: 120rpx;
+  padding: 0 24rpx;
+  padding-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar > view,
+.top-bar > image{
+  width: 36rpx;
+}
+.top-bar > text{
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+
+.pay-box{
+  width: 100vw;
+  margin-top: 120rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay-box > view{
+  width: 500rpx;
+  height: 500rpx;
+  /* background-color: turquoise; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+  color: white;
+}
+.pay-box > view > view:nth-child(2){
+  font-size: 40rpx;
+  opacity: 0.8;
+}
+.pay-box > view::after{
+  position: absolute;
+  z-index: -1;
+  content: '';
+  display: block;
+  width: calc(500rpx + 40rpx);
+  height: calc(500rpx + 40rpx);
+  border-radius: 50%;
+  background-color: turquoise;
+  opacity: 0.5;
+  animation: WiHe2 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s infinite alternate;
+}
+.pay-box > view::before{
+  position: absolute;
+  z-index: -2;
+  content: '';
+  display: block;
+  width: calc(500rpx + 40rpx + 40rpx);
+  height: calc(500rpx + 40rpx + 40rpx);
+  border-radius: 50%;
+  background-color: turquoise;
+  opacity: 0.2;
+  animation: WiHe1 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.3s infinite alternate;
+}
+@keyframes WiHe2{
+  0%{
+    width: calc(500rpx + 40rpx);
+    height: calc(500rpx + 40rpx);
+  }
+  100%{
+    width: calc(500rpx + 40rpx + 40rpx);
+    height: calc(500rpx + 40rpx + 40rpx);
+  }
+}
+@keyframes WiHe1{
+  0%{
+    width: calc(500rpx + 40rpx + 40rpx);
+    height: calc(500rpx + 40rpx + 40rpx);
+  }
+  100%{
+    width: calc(500rpx + 40rpx + 80rpx);
+    height: calc(500rpx + 40rpx + 80rpx);
+  }
+}
+
+.pay{
+  width: 100%;
+  height: 500rpx;
+  background-color: white;
+  box-sizing: border-box;
+  position: relative;
+}
+.pay > view:first-child{
+  padding: 40rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+.pay > view:first-child > text{
+  font-weight: bold;
+  font-size: 46rpx;
+  line-height: 46rpx;
+  color: tomato;
+}
+.pay > view:last-child{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.pay > view:last-child > view{
+  flex: 1;
+  height: 100%;
+  background-color: rgb(123, 206, 0);
+  color: white;
+  font-size: 40rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pay > view:last-child > view:first-child{
+  background-color: rgb(151, 151, 151);
+}

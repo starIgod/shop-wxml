@@ -1,0 +1,273 @@
+.top-bar{
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: calc(750rpx - 24rpx * 2);
+  background-color: #950000;
+  height: 120rpx;
+  padding: 0 24rpx;
+  padding-top: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-bar > view,
+.top-bar > image{
+  width: 36rpx;
+}
+.top-bar > text{
+  flex: 1;
+  text-align: center;
+  color: white;
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+
+.pay-box{
+  position: absolute;
+  bottom: 5rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.pay-box > view:first-child{
+  font-size: 34rpx;
+  line-height: 34rpx;
+  display: flex;
+  align-items: flex-end;
+}
+.pay-box > view:first-child > text{
+  font-size: 40rpx;
+  line-height: 40rpx;
+  font-weight: bold;
+  color: #950000;
+}
+.pag-box{
+  position: fixed;
+  z-index: 300;
+  bottom: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -2rpx 6rpx rgba(0, 0, 0, 0.274);
+}
+.put-infos{
+  height: 550rpx;
+  margin-bottom: 100rpx;
+  position: relative;
+}
+.put-info-item{
+  padding: 30rpx 20rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+.put-info-item > view:first-child{
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.put-info-item > view:last-child{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.put-info-item > view:last-child > view{
+  margin-top: 20rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  padding: 10rpx 15rpx;
+  border: 1rpx solid #ededed;
+  margin-right: 15rpx;
+}
+.put-info-item > view:last-child > view > view{
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-top: 5rpx;
+}
+.actiItem{
+  background-color: #dd2727;
+  color: white;
+}
+.put-num > view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.put-num > view > view{
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.put-num > view > view > view{
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx !important;
+  line-height: 60rpx !important;
+  background-color: #eeeeee;
+}
+.put-num > view > view > input{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100rpx;
+  box-sizing: border-box;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+
+.put-car-left{
+  width: 300rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.put-car-left > view{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  line-height: 30rpx;
+}
+.put-car-left > view > image{
+  width: 40rpx;
+}
+.put-car-left > view:last-child{
+  position: relative;
+}
+.car-length{
+  position: absolute;
+  top: -20rpx;
+  right: 0;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  background-color: tomato;
+  color: white;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.put-car-right{
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.put-car-right > view{
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  line-height: 34rpx;
+  height: 100%;
+  color: white;
+  background-color: #dd2727;
+}
+.put-car-right > view:nth-child(1){
+  background-color: #ff9500;
+}
+
+/* 分割块 */
+.hr-box{
+  height: 10rpx;
+  background-color: #ededed;
+}
+.banner-box{
+  margin-top: 120rpx;
+  height: 750rpx;
+}
+.price-box{
+  display: flex;
+  flex-direction: column;
+  border-top: 1rpx solid #efefef;
+}
+.price-box > view:nth-child(1){
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #efefef;
+}
+.price-box > view:nth-child(1) > view:first-child{
+  color: #a01e26;
+  font-weight: bold;
+  font-size: 46rpx;
+  line-height: 46rpx;
+}
+.price-box > view:nth-child(1) > view:first-child > text{
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.price-box > view:nth-child(1) > view:last-child{
+  display: flex;
+  align-items: center;
+}
+.price-box > view:nth-child(1) > view:last-child > image{
+  width: 40rpx;
+  line-height: 36rpx;
+}
+.price-box > view:nth-child(1) > view:last-child{
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #930009;
+}
+.price-box > text{
+  font-weight: bold;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  padding: 15rpx 20rpx;
+  border-bottom: 1rpx solid #efefef;
+}
+.price-box > view:last-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+.price-box > view:last-child > view{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #979797;
+}
+.price-box > view:last-child > view > image{
+  width: 30rpx;
+}
+.specs-box{
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.specs-box > text{
+  font-size: 36rpx;
+  line-height: 36rpx;
+}
+.specs-box > image{
+  width: 40rpx;
+}
+.shop-info{
+  padding-bottom: 100rpx;
+}
+.shop-info > view{
+  padding: 30rpx 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+

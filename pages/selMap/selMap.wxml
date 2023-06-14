@@ -1,0 +1,29 @@
+<scroll-view class="sc-box" scroll-y>
+<view class="hr-box" />
+<view class="items show-map">
+  <view>
+    <view class="bt-text">当前</view>
+    <view>分店：新地区</view>
+    <view>分店地址</view>
+  </view>
+  <image src="/public/images/05-选中.png" mode="widthFix"/>
+</view>
+<view class="hr-box" />
+<view class="items search-box">
+  <view class="bt-text">搜索</view>
+  <input type="text" placeholder="搜索分店"/>
+</view>
+<view class="hr-box" />
+<view class="items m-box">
+  <view class="bt-text">附近</view>
+  <view>
+    <view class="m-item">
+      <view>
+        <view class="m-bt">分店：新地区</view>
+        <view class="m-m">分店地址：</view>
+      </view>
+      <vie class="m-tip">0M</vie>
+    </view>
+  </view>
+</view>
+</scroll-view>

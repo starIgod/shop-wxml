@@ -1,0 +1,92 @@
+<view class="top-bar">
+  <image bindtap="backTo" src="/public/images/00-返回.png" mode="widthFix"/>
+  <text>商品详情</text>
+  <view />
+</view>
+<swiper class="banner-box"
+autoplay interval="2000"
+circular
+>
+  <swiper-item class="banner-item" wx:for="{{bannerList}}" wx:key="index">
+    <image src="{{item.BigUrl}}" mode="widthFix"/>
+  </swiper-item>
+</swiper>
+<view class="price-box">
+  <view>
+    <view>
+      {{shopInfo.Price}}<text>(会员价)</text>
+    </view>
+    <view>
+      <image src="/public/images/shopInfo/01-分享.png" mode="widthFix"/>
+      分享
+    </view>
+  </view>
+  <text>{{shopInfo.Name}}</text>
+  <view>
+    <view>
+      <image src="/public/images/shopInfo/02-库存分析.png" mode="widthFix"/>
+      已售：{{shopInfo.SaleVolume}}
+    </view>
+    <view>
+      <image src="/public/images/shopInfo/02-库存分析.png" mode="widthFix"/>
+      库存：{{shopInfo.StockQuantity}}
+    </view>
+    <view>
+      <image src="/public/images/shopInfo/02-发货信息.png" mode="widthFix"/>
+      <text>广东发售</text>
+    </view>
+  </view>
+</view>
+<view class="hr-box" />
+<view class="specs-box">
+  <text>选择 · 规格</text>
+  <image src="/public/images/home/01-进入箭头.png" mode="widthFix"/>
+</view>
+<view class="hr-box" />
+<view class="shop-info">
+  <view>宝贝详情</view>
+  <rich-text style="zoom: 40.5%;" nodes="{{shopInfo.Full}}"/>
+</view>
+<page-container bind:clickoverlay="setPutBtn"
+overlay-style="background-color:rgba(0,0,0,0.3)" duration="0" show="{{isShowPut}}">
+  <scroll-view scroll-y class="put-infos" wx:if="{{isShowPut}}">
+    <view class="put-info-item" wx:for="{{shopInfo.Attrs}}" wx:key="index">
+      <view>{{item.Name}}</view>
+      <view>
+        <view bindtap="putCars" data-cla="{{item}}" data-info="{{ite}}"
+        wx:for="{{item.Values}}" 
+        class="{{putObj[item.Name].Id==ite.Id?'actiItem':''}}"
+        wx:for-item="ite" wx:for-index="ind" wx:key="ind">
+        {{ite.Name}}</view>
+      </view>
+    </view>
+    <view class="put-info-item put-num">
+      <view>
+        <text>数量（库存剩余：{{stock}}）</text>
+        <view>
+          <view bindtap="reduceNum">-</view>
+          <input bindinput="setNum"	bindblur="setNum" 
+          value="{{num}}" type="number" model:value="0"/>
+          <view bindtap="addNum">+</view>
+        </view>
+      </view>
+    </view>
+    <view class="pay-box">
+      <view>总价：<text>{{total}}￥</text></view>
+    </view>
+  </scroll-view>
+</page-container>
+<view class="pag-box">
+  <view class="put-car-left">
+    <view><image src="/public/images/yinyu-kefu.png" mode="widthFix"/>客服</view>
+    <view bindtap="toHome"><image src="/public/images/home.png" mode="widthFix"/>首页</view>
+    <view bindtap="toCar"
+    ><image src="/public/images/gouwuche.png" mode="widthFix"/>购物车
+    <view class="car-length">{{stoLeng}}</view>
+    </view>
+  </view>
+  <view class="put-car-right">
+    <view bindtap="showPutCar">加入购物车</view>
+    <view bindtap="clearStor">立即购买</view>
+  </view>
+</view>

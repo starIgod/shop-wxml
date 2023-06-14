@@ -1,0 +1,33 @@
+<view class="search-box">
+  <image src="/public/images/home/02-搜索.png" mode="widthFix"/>
+  <input type="text" placeholder="搜一搜"
+  model:value="{{searchValue}}"/>
+  <image src="/public/images/home/03-关闭.png" mode="widthFix"
+  wx:if="{{searchValue.length!=0}}" bindtap="clearSearchValue"/>
+</view>
+<view class="container">
+  <scroll-view 	
+  scroll-y
+  class="left-box">
+    <view class="{{defauIndex==index?'actiCl':''}}"
+    wx:for="{{classifyList}}" wx:key="Id"
+    bindtap="setY" data-ind="{{index}}" data-id="{{item.Id}}"
+    >{{item.Name}}</view>
+    <view style="top: calc({{defauIndex}} * 90rpx);" class="scroll-box" />
+  </scroll-view>
+  <scroll-view
+  scroll-y 	enable-flex="{{true}}" enable-flex="true"
+  class="right-box">
+  <view class="shop-box">
+    <view class="shop-item" 
+    bindtap="getShop" data-item="{{item}}"
+    wx:for="{{showShopList}}" wx:key="Id">
+      <image src="{{item.Picture.BigUrl}}" mode="widthFix"/>
+      <text>{{item.Name}}</text>
+    </view>
+    <view wx:if="{{showShopList.length==0}}">
+      没有这类商品呢~
+    </view>
+  </view>
+  </scroll-view>
+</view>
